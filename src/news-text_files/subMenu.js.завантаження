@@ -1,0 +1,12 @@
+$(document).ready(function () {
+
+    $('.menu_midle > a').click(function(){
+        var idItem  = /(menu_)(\S+)/ig;
+        var Array1  = idItem.exec($(this).parent().attr('id'));
+        var nID     = '#sub_menu_'+(Array1[2]);
+
+        $('.blockSubMenuHor').hide();
+        $(nID).show('slow');
+        return false;
+    });
+});
