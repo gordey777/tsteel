@@ -46,19 +46,17 @@
                 </nav>
               </div>
 
-
-
-            <?php if( have_rows('head_social_link', 4 ) ): ?>
-                <?php while ( have_rows('head_social_link', 4 ) ) : the_row(); ?>
-                      <a href="<?php the_sub_field('link'); ?>" target="_blank">
-                        <?php $image = get_sub_field('image');
-                        if( !empty($image) ): ?>
-                          <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" width="25px"/>
-                        <?php endif; ?>
-                      </a>
-                  <?php  endwhile; ?>
-              <?php else : ?>
-            <?php endif; ?>
+              <?php if( have_rows('head_social_link', 4 ) ): ?>
+                  <?php while ( have_rows('head_social_link', 4 ) ) : the_row(); ?>
+                        <a href="<?php the_sub_field('link'); ?>" target="_blank">
+                          <?php $image = get_sub_field('image');
+                          if( !empty($image) ): ?>
+                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" width="25px"/>
+                          <?php endif; ?>
+                        </a>
+                    <?php  endwhile; ?>
+                <?php else : ?>
+              <?php endif; ?>
 
             </div>
           </div>
@@ -89,6 +87,7 @@
               <a href="#nav1" title="Show navigation">Show navigation</a>
               <a href="#" title="Hide navigation">Hide navigation</a>
               <?php wpeMainHeadNav(); ?>
+              <?php wpeHeadNav(); ?>
             </nav>
           </div>
           <div class="main_menu">

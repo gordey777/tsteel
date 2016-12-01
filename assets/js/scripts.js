@@ -171,11 +171,11 @@ $(document).ready(function() {
   });
 });
 
-//sidebar
+//sidebar ACCORDION
 (function($) {
   $(document).ready(function() {
 
-    $('#menu li.has-sub>a').on('click', function() {
+    $('#menu li.menu-item-has-children>a').on('click', function() {
       $(this).removeAttr('href');
       var element = $(this).parent('li');
       if (element.hasClass('open')) {
@@ -192,7 +192,7 @@ $(document).ready(function() {
       }
     });
 
-    $('#menu>ul>li.has-sub>a').append('<span class="holder"></span>');
+    $('#menu>ul>li.menu-item-has-children>a').append('<span class="holder"></span>');
 
     (function getColor() {
       var r, g, b;
@@ -241,7 +241,7 @@ $(document).ready(function() {
       return l;
     }
 
-    $("#menu .current-menu-item > a").click();
+    //$("#menu .current-menu-item > a").click();
 
   });
 })(jQuery);

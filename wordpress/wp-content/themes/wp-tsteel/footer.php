@@ -14,35 +14,30 @@
         </div>
         <div class="footer_block">
           <div class="footer_block_in">
-            <p><a href="#">Портфолио</a></p>
-            <p><a href="#">О компании</a></p>
-            <p><a href="#">Вакансии</a></p>
-            <p><a href="#">Контакты</a></p>
+
+            <?php wpeHeadNav(); ?>
+
           </div>
         </div>
         <div class="footer_block">
           <div class="footer_block_in">
-            <p><a href="#">БМЗ</a></p>
-            <p><a href="#">ЛСТК</a></p>
-            <p><a href="#">Сварные балки</a></p>
-            <p><a href="#">Металлоконстукции</a></p>
-            <p><a href="#">Кровля</a></p>
-            <p><a href="#">Фасады</a></p>
-            <p><a href="#">Профнастил</a></p>
+            <?php wpeMainHeadNav(); ?>
+
           </div>
         </div>
         <div class="footer_block_last">
           <div class="footer_block_in_last">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/icon_metka.png">Украина, г. Полтава
-            <p> ул.Зеньковская, 52, 36009</p>
             <p>
-              <img src="<?php echo get_template_directory_uri(); ?>/img/icon_mobile.png">+380 (0532) 506-559
+              <img src="<?php echo get_template_directory_uri(); ?>/img/icon_metka.png"><?php the_field('footer_adress', 4); ?></p>
+            <p>
+              <img src="<?php echo get_template_directory_uri(); ?>/img/icon_mobile.png"><?php the_field('footer_tel', 4); ?>
             </p>
             <p>
               Мы в социальных сетях:
               <br>
             </p>
             <p>
+
             <?php if( have_rows('head_social_link', 4 ) ): ?>
                 <?php while ( have_rows('head_social_link', 4 ) ) : the_row(); ?>
                       <a href="<?php the_sub_field('link'); ?>">
