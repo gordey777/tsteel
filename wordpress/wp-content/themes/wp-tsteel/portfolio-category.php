@@ -1,4 +1,5 @@
-<?php /* Template Name: NO sidbar Page */ get_header(); ?>
+<?php /* Template Name: Portfolio Page */ get_header(); ?>
+
   <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -12,7 +13,6 @@
         <div class="kroshki_in">
 
           <div class="navigation-tree-container">
-          <?php easy_breadcrumbs(); ?>
             <a>
             </a>
             <ul class="B_crumbBox">
@@ -31,12 +31,43 @@
       <div class="main_text">
         <div class="main_text_in">
 
-            <?php if ( has_post_thumbnail()) :?>
-              <a class="single-thumb" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                <?php the_post_thumbnail(); // Fullsize image for the single post ?>
-              </a>
-            <?php endif; ?><!-- /post thumbnail -->
-            <?php the_content(); ?>
+
+    <?php
+    $args = array(
+      'sort_order'   => 'ASC',
+      'sort_column'  => 'post_title',
+      'hierarchical' => 1,
+      'exclude'      => '',
+      'include'      => '',
+      'meta_key'     => '',
+      'meta_value'   => '',
+      'authors'      => '',
+      'child_of'     => $post->ID,
+      'parent'       => -1,
+      'exclude_tree' => '',
+      'number'       => '',
+      'offset'       => 0,
+      'post_type'    => 'page',
+      'post_status'  => 'publish',
+    );
+    $pages = get_pages($args);
+    foreach( $pages as $page ) {
+      $content = $page->post_content;
+
+      // пропустим страницу без контента
+      if ( ! $content ) continue;
+
+      $content = apply_filters( 'the_content', $content );
+
+      ?>
+      <h2><a href="<?php echo get_page_link( $page->ID ); ?>"><?php echo $page->post_title; ?></a></h2>
+      <?php the_post_thumbnail(); // Fullsize image for the single post ?>
+      <?php
+    }
+
+    wp_reset_postdata(); ?>
+
+
 
         </div>
       </div><!-- .main_text -->

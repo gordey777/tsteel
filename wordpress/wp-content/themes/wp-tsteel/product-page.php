@@ -1,8 +1,7 @@
-<?php get_header(); ?>
-  <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-<!-- CONTENT -->
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<?php /* Template Name: Product Page */ get_header(); ?>
 
+  <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
     <div class="main_title">
       <div class="main_title_h1">
@@ -13,11 +12,10 @@
       <div class="kroshki_in">
 
         <div class="navigation-tree-container">
-          <?php easy_breadcrumbs(); ?>
           <a>
           </a>
+          <?php easy_breadcrumbs(); ?>
           <ul class="B_crumbBox">
-
             <a></a>
             <li class="B_firstCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
               <a></a><a class="B_homeCrumb" itemprop="url" rel="Home" href="#"><span itemprop="title">Главная</span></a></li>
@@ -31,55 +29,27 @@
       </div>
     </div><!-- .kroshki -->
 
+    <div class="main_text_statik">
+      <div class="statik_kontent">
 
+        <!-- SIDEBAR -->
+        <?php include 'product-sidebar.php'; ?>
 
-        <?php if ( in_category( 3 ) ) { ?>
-          <div class="main_text">
-            <div class="main_text_in">
+        <div class="main_text_in_statik">
 
-                <?php if ( has_post_thumbnail()) :?>
-                  <a class="single-thumb" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                    <?php the_post_thumbnail(); // Fullsize image for the single post ?>
-                  </a>
-                <?php endif; ?><!-- /post thumbnail -->
-                <?php the_content(); ?>
+          <?php if ( has_post_thumbnail()) :?>
+            <a class="single-thumb" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+              <?php the_post_thumbnail(); // Fullsize image for the single post ?>
+            </a>
+          <?php endif; ?><!-- /post thumbnail -->
+          <?php the_content(); ?>
 
-            </div>
-          </div><!-- .main_text -->
-
-
-        <?php }
-        else { ?>
-
-          <div class="main_text_statik">
-            <div class="statik_kontent">
-
-              <!-- SIDEBAR -->
-                <?php get_sidebar(); ?>
-
-              <div class="main_text_in_statik">
-                <?php if ( has_post_thumbnail()) :?>
-                  <a class="single-thumb" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                    <?php the_post_thumbnail(); // Fullsize image for the single post ?>
-                  </a>
-                <?php endif; ?><!-- /post thumbnail -->
-                <?php the_content(); ?>
-
-              </div><!-- .main_text_in_statik -->
-            </div><!-- .main_text_statik -->
-          </div><!-- .statik_kontent -->
-
-        <?php } ?>
-
-
+        </div><!-- .main_text_in_statik -->
+      </div><!-- .main_text_statik -->
+    </div><!-- .statik_kontent -->
 
     </article>
-
-
-
-
-
-  <?php endwhile; else: ?>
+  <?php endwhile; else: // If 404 page error ?>
     <article>
 
       <h2 class="page-title inner-title"><?php _e( 'Sorry, nothing to display.', 'wpeasy' ); ?></h2>
@@ -88,3 +58,4 @@
   <?php endif; ?>
 
 <?php get_footer(); ?>
+

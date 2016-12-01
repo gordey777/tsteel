@@ -175,8 +175,8 @@ function wpeSideNav() {
     'fallback_cb'     => 'wp_page_menu',
     'before'          => '',
     'after'           => '',
-    'link_before'     => '',
-    'link_after'      => '',
+    'link_before'     => '<span>',
+    'link_after'      => '</span>',
     'items_wrap'      => '<ul class="sidebarnav">%3$s</ul>',
     'depth'           => 0,
     'walker'          => ''
@@ -439,7 +439,7 @@ function single_result() {
 function easy_breadcrumbs() {
   /* === ОПЦИИ === */
   $text['home'] = 'Главная'; // текст ссылки "Главная"
-  $text['category'] = 'Архив рубрики "%s"'; // текст для страницы рубрики
+  $text['category'] = '%s'; // текст для страницы рубрики
   $text['search'] = 'Результаты поиска по запросу "%s"'; // текст для страницы с результатами поиска
   $text['tag'] = 'Записи с тегом "%s"'; // текст для страницы тега
   $text['author'] = 'Статьи автора %s'; // текст для страницы автора
@@ -449,7 +449,7 @@ function easy_breadcrumbs() {
   $show_on_home = 0; // 1 - показывать "хлебные крошки" на главной странице, 0 - не показывать
   $show_home_link = 1; // 1 - показывать ссылку "Главная", 0 - не показывать
   $show_title = 1; // 1 - показывать подсказку (title) для ссылок, 0 - не показывать
-  $delimiter = ' &raquo; '; // разделить между "крошками"
+  $delimiter = '/'; // разделить между "крошками"
   $before = '<span class="current">'; // тег перед текущей "крошкой"
   $after = '</span>'; // тег после текущей "крошки"
   /* === КОНЕЦ ОПЦИЙ === */
@@ -696,5 +696,11 @@ function first_post_image() {
 }
 
 
+
+function filter_ptags_on_images($content){
+//функция preg replace, которая убивает тег p
+    return preg_replace('/<p>\s*(<a .*>)?\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+}
+add_filter('the_content', 'filter_ptags_on_images');
 
 ?>

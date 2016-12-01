@@ -69,7 +69,6 @@
   -->
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.7.2.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
-<!--   <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script> -->
       <?php wp_footer(); ?>
 </body>
 

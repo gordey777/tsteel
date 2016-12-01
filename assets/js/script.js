@@ -1,5 +1,6 @@
 ( function( $ ) {
 $( document ).ready(function() {
+
 $('#menu li.has-sub>a').on('click', function(){
 		$(this).removeAttr('href');
 		var element = $(this).parent('li');
@@ -63,3 +64,5 @@ $('#menu li.has-sub>a').on('click', function(){
 	}
 });
 } )( jQuery );
+
+
