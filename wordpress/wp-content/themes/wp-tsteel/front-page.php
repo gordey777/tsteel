@@ -41,14 +41,15 @@
 
 
   <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 
         <?php the_content(); ?>
-
+    <?php edit_post_link(); ?>
 
     </article>
-<?php edit_post_link(); ?>
+
   <?php endwhile; else: // If 404 page error ?>
     <article>
       <div class="main_text_in">
