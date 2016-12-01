@@ -15,8 +15,8 @@
     </article>
   <?php endif; ?>
 
-<?php if( get_field('enable_sidebar') ): ?>
+
   <?php get_sidebar(); ?>
-<?php endif; ?>
+
 
 <?php get_footer(); ?>

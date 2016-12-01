@@ -1,31 +1,82 @@
 <?php get_header(); ?>
   <?php if (have_posts()): while (have_posts()) : the_post(); ?>
+<!-- CONTENT -->
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-      <h1 class="single-title inner-title"><?php the_title(); ?></h1>
-      <?php if ( has_post_thumbnail()) :?>
-        <a class="single-thumb" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-          <?php the_post_thumbnail(); // Fullsize image for the single post ?>
-        </a>
-      <?php endif; ?><!-- /post thumbnail -->
-      <?php edit_post_link(); ?>
-      <?php the_content(); ?>
-      <span class="date"><?php the_time('d F Y'); ?> <?php the_time('H:i'); ?></span>
-      <span class="author"><?php _e( 'Published by', 'wpeasy' ); ?> <?php the_author_posts_link(); ?></span>
-      <span class="comments"><?php comments_popup_link( __( 'Leave your thoughts', 'wpeasy' ), __( '1 Comment', 'wpeasy' ), __( '% Comments', 'wpeasy' )); ?></span><!-- /post details -->
+
+    <div class="main_title">
+      <div class="main_title_h1">
+        <h1><?php the_title(); ?></h1>        <?php edit_post_link(); ?>
+      </div>
+    </div>
+    <div class="kroshki">
+      <div class="kroshki_in">
+
+        <div class="navigation-tree-container">
+          <a>
+          </a>
+          <ul class="B_crumbBox">
+            <a></a>
+            <li class="B_firstCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+              <a></a><a class="B_homeCrumb" itemprop="url" rel="Home" href="#"><span itemprop="title">Главная</span></a></li>
+            /
+            <li itemscope="itemscope" class="B_crumb" itemtype="http://data-vocabulary.org/Breadcrumb"><a class="B_crumb" itemprop="url" rel="Компания Термастил, информация про компанию, история компании" href="#"><span itemprop="title">О компании</span></a></li>
+            /
+            <li class="B_lastCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"></li>
+            <li itemscope="itemscope" class="B_currentCrumb" itemtype="http://data-vocabulary.org/Breadcrumb">Новости</li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- .kroshki -->
 
 
-      <?php the_tags( __( 'Tags: ', 'wpeasy' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
 
-      <p><?php _e( 'Categorised in: ', 'wpeasy' ); the_category(', '); // Separated by commas ?></p>
+        <?php if ( in_category( 3 ) ) { ?>
+          <div class="main_text">
+            <div class="main_text_in">
 
-      <p><?php _e( 'This post was written by ', 'wpeasy' ); the_author(); ?></p>
+                <?php if ( has_post_thumbnail()) :?>
+                  <a class="single-thumb" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                    <?php the_post_thumbnail(); // Fullsize image for the single post ?>
+                  </a>
+                <?php endif; ?><!-- /post thumbnail -->
+                <?php the_content(); ?>
+
+            </div>
+          </div><!-- .main_text -->
 
 
+        <?php }
+        else { ?>
 
-      <?php comments_template(); ?>
+          <div class="main_text_statik">
+            <div class="statik_kontent">
+
+              <!-- SIDEBAR -->
+                <?php get_sidebar(); ?>
+
+              <div class="main_text_in_statik">
+                <?php if ( has_post_thumbnail()) :?>
+                  <a class="single-thumb" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                    <?php the_post_thumbnail(); // Fullsize image for the single post ?>
+                  </a>
+                <?php endif; ?><!-- /post thumbnail -->
+                <?php the_content(); ?>
+
+              </div><!-- .main_text_in_statik -->
+            </div><!-- .main_text_statik -->
+          </div><!-- .statik_kontent -->
+
+        <?php } ?>
+
+
 
     </article>
+
+
+
+
+
   <?php endwhile; else: ?>
     <article>
 
@@ -33,7 +84,12 @@
 
     </article>
   <?php endif; ?>
-<?php if( get_field('enable_sidebar') ): ?>
-  <?php get_sidebar(); ?>
-<?php endif; ?>
+
+<?php if ( in_category( 3 ) ) {
+
+}
+else {
+  get_sidebar();
+} ?>
+
 <?php get_footer(); ?>
