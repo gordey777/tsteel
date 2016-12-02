@@ -56,6 +56,13 @@
       </div>
     </div><!-- .botom -->
 
+            <nav id="menu__mob" role="navigation">
+              <ul>
+                <?php wpeMainHeadNav(); ?>
+                <?php wpeHeadNav(); ?>
+              </ul>
+            </nav>
+
   </div><!-- .layout-wrapper -->
 
 
@@ -63,6 +70,7 @@
 <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   -->
   <script src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.7.2.min.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.mmenu.all.min.js"></script>
   <script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
       <?php wp_footer(); ?>
 </body>

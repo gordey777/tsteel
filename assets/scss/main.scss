@@ -1,3 +1,6 @@
+@import 'menu-humburger';
+@import 'jquery.mmenu.all';
+
 #nav1 {
   /* 1000 */
   font-family: 'Open Sans', sans-serif;
@@ -565,6 +568,23 @@ a,
     }
   }
 }
+select {
+  width: 210px;
+  height: 30px;
+}
+
+.reg-btn {
+  font-size: 16px;
+
+  width: 150px;
+  height: 30px;
+
+  color: #fafafa;
+  border: 0;
+  border-radius: 3px;
+  background: #006da3;
+}
+
 #fdw nav .head-main-nav {
   li {
     &:last-child {
@@ -576,6 +596,53 @@ a,
     }
   }
 }
+
+
 .left-links {
-  height: 75px;
+  height: 70px;
+  padding-top: 5px;
+}
+
+.breadcrumbs {
+  font-size: 10px;
+  font-weight: 700;
+
+  padding-top: 10px;
+
+  color: #555;
+  .delimiter {
+    font-size: 16px;
+
+    padding: 0 5px;
+  }
+  .current {
+    color: #000;
+  }
+}
+
+#top-head-menu > ul > li > a {
+  text-transform: uppercase;
+}
+
+.inputtext {
+  width: 210px;
+}
+
+.inputtext__small {
+  width: 50px;
+}
+
+#head__main_menu ul.sub-menu > li > ul.sub-menu {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  #hamburger {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .menu_left {
+    display: none;
+  }
 }

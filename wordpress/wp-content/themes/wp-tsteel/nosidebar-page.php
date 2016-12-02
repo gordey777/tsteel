@@ -1,4 +1,4 @@
-<?php /* Template Name: NO sidbar Page */ get_header(); ?>
+<?php get_header(); ?>
   <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -8,26 +8,13 @@
           <h1><?php the_title(); ?></h1>        <?php edit_post_link(); ?>
         </div>
       </div>
-      <div class="kroshki">
-        <div class="kroshki_in">
-
-          <div class="navigation-tree-container">
+          <div class="kroshki">
+      <div class="kroshki_in">
+        <div class="navigation-tree-container">
           <?php easy_breadcrumbs(); ?>
-            <a>
-            </a>
-            <ul class="B_crumbBox">
-              <a></a>
-              <li class="B_firstCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
-                <a></a><a class="B_homeCrumb" itemprop="url" rel="Home" href="#"><span itemprop="title">Главная</span></a></li>
-              /
-              <li itemscope="itemscope" class="B_crumb" itemtype="http://data-vocabulary.org/Breadcrumb"><a class="B_crumb" itemprop="url" rel="Компания Термастил, информация про компанию, история компании" href="#"><span itemprop="title">О компании</span></a></li>
-              /
-              <li class="B_lastCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb"></li>
-              <li itemscope="itemscope" class="B_currentCrumb" itemtype="http://data-vocabulary.org/Breadcrumb">Новости</li>
-            </ul>
-          </div>
         </div>
-      </div><!-- .kroshki -->
+      </div>
+    </div><!-- .kroshki -->
       <div class="main_text">
         <div class="main_text_in">
 

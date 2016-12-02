@@ -1,0 +1,268 @@
+<div id="contact-form">
+  <form action="bmz/raschet-stoimosti-zdaniya(bmz)" method="post" enctype="multipart/form-data">
+    <br>
+    <table width="100%" height="50" cellspacing="1" cellpadding="1" border="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="50%"><b>1. <u>Назначение здания: </u></b></td>
+          <td width="" style=" vertical-align: top; " height="1">
+
+
+[select purpose "Не указано" "Складское" "Сельскохозяйственное" "Производственное" "Спортивное" "Другое"]
+
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="100%" height="50" cellspacing="1" cellpadding="1" border="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="50%"><b>2. <u>Район строительства (Область, Город)</u>&nbsp;</b>
+            <br>
+            <br>
+          </td>
+          <td width="" height="1" valign="top" align="left">
+
+
+[text region class:inputtext]
+
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="100%" height="50" cellspacing="1" cellpadding="1" border="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="145"><b>3. <u>Размеры здания: </u></b></td>
+          <td width="" height="1" valign="top" align="left">
+            <span class="grey_dark">[text plan_length class:inputtext class:inputtext__small]<text align="top"><i>  Длина<b>(м)</b>;</i> &nbsp;</text>[text planwidth class:inputtext class:inputtext__small]<text align="top"><i>  Ширина<b>(м)</b>;</i> &nbsp;</text>[text plane_height class:inputtext class:inputtext__small]<text align="top"><i>  Высота<b>(м)</b>;</i> &nbsp;</text></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="100%" height="50" cellspacing="1" cellpadding="1" border="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="50%"><b>4. <u>Этажность здания:</u></b></td>
+          <td width="" height="1" valign="top" align="left">
+
+[text stores  class:inputtext__small]
+
+
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="100%" height="50" cellspacing="1" cellpadding="1" border="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="50%"><b>5. <u>Количество пролетов:</u></b></td>
+          <td width="" height="1" valign="top" align="left">
+
+
+
+[select structural "Не указано" "Однопролетное" "Двухпролетное" "Трехпролетное" "Другое"]
+
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="100%" height="50" cellspacing="1" cellpadding="1" border="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="50%"><b>6. <u>Тип крыши:</u></b></td>
+          <td width="" height="1" valign="top" align="left">
+
+
+[select roof "Не указано" "Односкатная" "Двускатная" "Другое"]
+
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="100%" height="50" cellspacing="1" cellpadding="1" border="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="50%"><b>7. <u>Конструкция кровли:</u></b></td>
+          <td width="" height="1" valign="top" align="left">
+
+
+[select roof_type "Не указано" "Профнастил" "Полистовая сборка" "Сэндвич-панели"]
+
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="100%" height="50" cellspacing="1" cellpadding="1" border="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="50%"><b>9. <u>Наличие подкрановых путей/грузоподъемность:</u></b></td>
+          <td width="" height="1" valign="top" align="left">
+
+
+[select craneways "Нет" "Да - 1т" "Да - 2т" "Да - 3,2т" "Да - 5т" "Да - 8т" "Да - 10т" "Да - более 10т"]
+
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="100%" height="50" cellspacing="1" cellpadding="1" border="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="50%"><b>10. <u>Конструкция стен: </u></b></td>
+          <td width="" height="1" valign="top" align="left">
+
+
+[select wall "Не указано" "Профнастил" "Полистовая сборка" "Сэндвич-панели"]
+
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="100%" height="50" cellspacing="1" cellpadding="1" border="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="20%"><b>11. <u>Окна:</u></b></td>
+          <td width="" height="1" valign="top" align="left">[text kl_windows class:inputtext class:inputtext__small]&nbsp;&nbsp;<i text="" align="top" style="font-size: 13px; line-height: 20px;">Кол-во,&nbsp;</i><span style="font-style: normal;">&nbsp; &nbsp; </span>[text kl_windows_1 class:inputtext class:inputtext__small]<span style="font-style: normal;">&nbsp;</span><span style="font-style: normal;">&nbsp;X &nbsp;</span>[text kl_windows_2 class:inputtext class:inputtext__small]&nbsp;&nbsp;Размеры, <b>(мм).</b><i>&nbsp;&nbsp;</i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="100%" height="50" cellspacing="1" cellpadding="1" border="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="20%"><b>12. <u>Двери:</u></b></td>
+          <td width="" height="1" valign="top" align="left">[text kl_doors class:inputtext class:inputtext__small]&nbsp;&nbsp;<i text="" align="top" style="font-size: 13px; line-height: 20px;">Кол-во,&nbsp;</i><span style="font-style: normal;">&nbsp; &nbsp; </span>[text kl_doors_1 class:inputtext class:inputtext__small]<span style="font-style: normal;">&nbsp;</span><span style="font-style: normal;">&nbsp;X &nbsp;</span>[text kl_doors_2 class:inputtext class:inputtext__small]&nbsp;&nbsp;Размеры, <b>(мм).</b><i>&nbsp;&nbsp;</i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="100%" height="50" cellspacing="1" cellpadding="1" border="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="20%"><b>13. <u>Ворота:</u></b></td>
+          <td width="" height="1" valign="top" align="left">
+            <i text="" align="top">[text kl_entrances class:inputtext class:inputtext__small]&nbsp;&nbsp;<i text="" align="top" style="font-size: 13px; line-height: 20px;">Кол-во,&nbsp;</i><span style="font-style: normal;">&nbsp; &nbsp; </span>[text kl_entrances_1 class:inputtext class:inputtext__small]<span style="font-style: normal;">&nbsp;</span><span style="font-style: normal;">&nbsp;X &nbsp;</span>[text kl_entrances_2 class:inputtext class:inputtext__small]&nbsp;&nbsp;Размеры, <b>(мм).</b><i>&nbsp;&nbsp;</i></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="100%" height="50" cellspacing="1" cellpadding="1" border="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="50%"><b>14. <u>Выполнение строительно-монтажных работ:</u></b></td>
+          <td width="" height="1" valign="top" align="left">
+
+
+[select project "Не указано" "Монтаж собственными силами Заказчика" "Монтаж силами ООО «ИСК Термастил-Украина»" "Шефмонтаж ООО «ИСК Термастил-Украина»"]
+
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="100%" height="50" cellspacing="1" cellpadding="1" border="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="50%"><b>15. <u>Способ доставки:</u></b></td>
+          <td width="" height="1" valign="top" align="left">
+
+
+[select dostavka "Не указано" "Самовывоз" "ООО «ИСК Термастил-Украина»"]
+
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <font size="3">
+      <hr> </font>
+    <table width="100%" height="50" cellspacing="1" cellpadding="1" border="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="50%"><b> Компания:</b>
+            <font color="red"><span class="form-required starrequired">*</span></font>
+          </td>
+          <td width="" height="1" valign="top" align="left">
+
+
+[text company class:inputtext]
+
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="100%" height="50" cellspacing="1" cellpadding="1" border="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="50%"><b>Ф.И.О.заказчика:</b>
+            <font color="red"><span class="form-required starrequired">*</span></font>
+          </td>
+          <td width="" height="1" valign="top" align="left">
+
+
+[text* name class:inputtext akismet:author]
+
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="100%" height="50" cellspacing="1" cellpadding="1" border="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="50%"><b>Телефон:&nbsp;</b>
+            <font color="red"><span class="form-required starrequired">*</span></font>
+          </td>
+          <td width="" height="1" valign="top" align="left">
+
+
+[tel* tel class:inputtext]
+
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="100%" height="50" cellspacing="1" cellpadding="1" border="0">
+      <tbody>
+        <tr>
+          <td valign="top" width="50%"><b>E-Mail&nbsp;</b>
+            <font color="red"><span class="form-required starrequired">*</span></font>
+            <br>
+            <br>
+          </td>
+          <td width="" height="1" valign="top" align="left">
+
+
+[url* email class:inputtext akismet:author_url]
+
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table width="100%" height="50" cellspacing="1" cellpadding="1" border="0">
+      <tbody>
+        <tr>
+          <td width="" height="1" valign="top" align="left">
+
+
+            <input class="reg-btn" type="submit" name="send" value="Отправить">
+
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+</div>

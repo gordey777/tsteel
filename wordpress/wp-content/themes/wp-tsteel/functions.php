@@ -449,7 +449,7 @@ function easy_breadcrumbs() {
   $show_on_home = 0; // 1 - показывать "хлебные крошки" на главной странице, 0 - не показывать
   $show_home_link = 1; // 1 - показывать ссылку "Главная", 0 - не показывать
   $show_title = 1; // 1 - показывать подсказку (title) для ссылок, 0 - не показывать
-  $delimiter = ' / '; // разделить между "крошками"
+  $delimiter = '<span class="delimiter">/</span>'; // разделить между "крошками"
   $before = '<span class="current">'; // тег перед текущей "крошкой"
   $after = '</span>'; // тег после текущей "крошки"
   /* === КОНЕЦ ОПЦИЙ === */
@@ -703,4 +703,20 @@ function filter_ptags_on_images($content){
 }
 add_filter('the_content', 'filter_ptags_on_images');
 
+
+
+/*
+ * Проверят является ли текущая постоянная страница дочерней страницей
+ * Возвращает true или false
+ */
+function is_subpage() {
+  global $post;
+
+  if ( is_page() && $post->post_parent ) {
+    return $post->post_parent;
+  }
+  else {
+    return false;
+  }
+}
 ?>

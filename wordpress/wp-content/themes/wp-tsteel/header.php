@@ -35,13 +35,17 @@
 
 <body>
   <div class="layout-wrapper">
+    <a href="#menu__mob" id="hamburger" class="humb-toggle-switch humb-toggle-switch__htx">
+      <span>toggle menu</span>
+    </a>
+
     <div class="header-wrapper">
       <div class="header-wrapper-top">
         <div class="header-wrapper-top-in">
           <div class="menu_top">
             <div class="top_menu_kont">
               <div id="fdw">
-                <nav  class="top__nav">
+                <nav id="top-head-menu" class="top__nav">
                 <?php wpeHeadNav(); ?>
                 </nav>
               </div>
@@ -82,17 +86,11 @@
             <?php endif; ?>
           </div>
 
-          <div class="menu_mob">
-            <nav id="nav1" role="navigation">
-              <a href="#nav1" title="Show navigation">Show navigation</a>
-              <a href="#" title="Hide navigation">Hide navigation</a>
-              <?php wpeMainHeadNav(); ?>
-              <?php wpeHeadNav(); ?>
-            </nav>
-          </div>
+
+
           <div class="main_menu">
             <div id="fdw">
-              <nav>
+              <nav id="head__main_menu">
                 <?php wpeMainHeadNav(); ?>
               </nav>
             </div>
