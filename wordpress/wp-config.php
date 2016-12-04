@@ -1,9 +1,9 @@
 <?php
-define('DB_NAME', 'p284179_demo8');
-define('DB_USER', 'p284179_demo8');
-define('DB_PASSWORD', 'W7DDYr5YU8');
+define('DB_NAME', 'tsteel');
+define('DB_USER', 'tsteel');
+define('DB_PASSWORD', '');
 
-define('DB_HOST', 'p284179.mysql.ihc.ru');
+define('DB_HOST', 'localhost');
 
 define('DISABLE_WP_CRON', true);
 define('FS_METHOD', 'direct');
