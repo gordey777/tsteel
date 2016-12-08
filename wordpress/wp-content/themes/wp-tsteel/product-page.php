@@ -22,7 +22,7 @@
         <!-- SIDEBAR -->
         <?php include 'product-sidebar.php'; ?>
 
-        <div class="main_text_in_statik">
+        <div class="main_text_in_statik prod__page">
 
           <?php if ( has_post_thumbnail()) :?>
             <a class="single-thumb" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">

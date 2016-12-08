@@ -623,6 +623,33 @@ select {
   }
 }
 
+
+.gllety_hata {
+  float: left;
+
+  width: 860px;
+}
+.item_block {
+  float: left;
+
+  width: 270px;
+  margin-right: 16px;
+  margin-bottom: 10px;
+  /* height: 170px;*/
+  padding: 1px;
+
+  box-shadow: 0 1px 1px 1px rgba(136,136,136,.30);
+}
+.item_block_title {
+  width: 100%;
+  padding: 5px;
+
+  text-align: center;
+}
+
+
+
+
 #top-head-menu > ul > li > a {
   text-transform: uppercase;
 }
@@ -630,7 +657,7 @@ select {
 .inputtext {
   width: 210px;
 }
-.size-balka{
+.size-balka {
   width: 110px;
 }
 .inputtext__small {
@@ -642,12 +669,13 @@ select {
 }
 
 @media (min-width: 768px) {
+  .front-content,
   #hamburger {
     display: none;
   }
 }
 @media (max-width: 768px) {
   .menu_left {
-    display: none;
+    //display: none;
   }
 }

@@ -719,4 +719,9 @@ function is_subpage() {
     return false;
   }
 }
+
+//Убираем теги  p и br в пустых строчках
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
+
 ?>

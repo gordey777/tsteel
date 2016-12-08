@@ -37,12 +37,33 @@
 
   <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <div class="front-content menu_left">
+        <div class="cnt">
+          <div id="menu">
+            <?php wpeMainHeadNav(); ?>
+            <?php //wpeHeadNav(); ?>
+          </div>
+        </div>
+      </div><!-- .menu_left -->
 
-      <?php the_content(); ?>
-      <?php edit_post_link(); ?>
 
-    </article>
+  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+    <div class="main_title">
+      <div class="main_title_h1">
+        <h1><?php the_title(); ?></h1>        <?php edit_post_link(); ?>
+      </div>
+    </div>
+
+    <div class="main_text">
+      <div class="main_text_in">
+
+        <?php the_content(); ?>
+
+      </div><!-- .main_text -->
+    </div>
+
+  </article>
 
   <?php endwhile; else: // If 404 page error ?>
     <article>
@@ -52,8 +73,10 @@
     </article>
   <?php endif; ?>
 
+
   <div class="main_news">
     <div class="main_news_in">
+
 
       <div class="main_portfolio_in_title">
         НОВОСТИ

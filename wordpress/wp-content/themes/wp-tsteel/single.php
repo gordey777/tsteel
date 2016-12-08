@@ -19,7 +19,7 @@
 
 
 
-        <?php if ( in_category( 3 ) ) { ?>
+        <?php if ( in_category( array(8, 3, 12, 10, 9, 11 /*ID Рубрик "Портфолио"*/)) ) { ?>
           <div class="main_text">
             <div class="main_text_in">
 

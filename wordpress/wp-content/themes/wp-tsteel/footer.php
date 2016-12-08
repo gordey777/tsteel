@@ -56,12 +56,12 @@
       </div>
     </div><!-- .botom -->
 
-            <nav id="menu__mob" role="navigation">
-              <ul>
-                <?php wpeMainHeadNav(); ?>
-                <?php wpeHeadNav(); ?>
-              </ul>
-            </nav>
+<!--             <nav id="menu__mob" role="navigation">
+  <ul>
+    <?php //wpeMainHeadNav(); ?>
+    <?php //wpeHeadNav(); ?>
+  </ul>
+</nav> -->
 
   </div><!-- .layout-wrapper -->
 

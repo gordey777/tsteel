@@ -856,6 +856,8 @@ button.thoughtbot {
   }
 }
 
+
+
 .galleries {
   width: 100%;
   margin: 15px auto;
@@ -875,6 +877,26 @@ button.thoughtbot {
       margin: 0;
       padding: 0;
     }
+  }
+}
+.main_text_in_statik,
+.prod__page {
+  .imghover_gallery {
+    width: 302px !important;
+    height: 419px !important;
+  }
+  .galleries li {
+    width: 302px !important;
+    height: 419px !important;
+    margin-right: 25px !important;
+    margin-bottom: 25px !important;
+    img {
+      width: 302px !important;
+      height: 419px !important;
+    }
+  }
+  #slider {
+    height: 600px;
   }
 }
 
@@ -1296,4 +1318,3 @@ button.thoughtbot {
     font-size: 8px;
   }
 }
-

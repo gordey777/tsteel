@@ -35,9 +35,9 @@
 
 <body>
   <div class="layout-wrapper">
-    <a href="#menu__mob" id="hamburger" class="humb-toggle-switch humb-toggle-switch__htx">
-      <span>toggle menu</span>
-    </a>
+<!--     <a href="#menu__mob" id="hamburger" class="humb-toggle-switch humb-toggle-switch__htx">
+  <span>toggle menu</span>
+</a> -->
 
     <div class="header-wrapper">
       <div class="header-wrapper-top">
